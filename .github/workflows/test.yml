@@ -13,5 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: .\MyScripts\install.ps1
+      run: .\src\main\java\de\jedox\powershell.ps1 
       shell: powershell
