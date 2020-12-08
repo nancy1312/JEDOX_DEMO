@@ -1,0 +1,19 @@
+name: Samples push
+
+on:
+  push:
+    branches:
+      -  '*'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: jitterbit/get-changed-files@v1
+        id: files
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo "${{ steps.files.outputs.modified }}"
